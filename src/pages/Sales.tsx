@@ -89,7 +89,7 @@ export function Sales() {
                 </div>
                 <div className="text-center">
                   <p className="text-sm font-medium text-gray-600">Total Revenue</p>
-                  <p className="text-2xl font-bold text-green-600">${totalRevenue.toFixed(2)}</p>
+                  <p className="text-2xl font-bold text-green-600">R{totalRevenue.toFixed(2)}</p>
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@ export function Sales() {
                             <ul className="space-y-1">
                               {sale.services.map((service, index) => (
                                 <li key={index} className="text-sm text-gray-700">
-                                  {service.quantity}× {service.name} - ${service.price.toFixed(2)}
+                                  {service.quantity}× {service.name} - R{service.price.toFixed(2)}
                                 </li>
                               ))}
                             </ul>
@@ -146,7 +146,7 @@ export function Sales() {
                         <div className="flex items-center space-x-2">
                           <DollarSign className="w-5 h-5 text-green-600" />
                           <span className="text-2xl font-bold text-gray-900">
-                            ${sale.total.toFixed(2)}
+                            R{sale.total.toFixed(2)}
                           </span>
                         </div>
                       </div>

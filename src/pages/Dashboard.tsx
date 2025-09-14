@@ -54,7 +54,7 @@ export function Dashboard() {
   const statCards = [
     {
       title: "Today's Revenue",
-      value: `$${stats.todaysRevenue.toFixed(2)}`,
+      value: `R${stats.todaysRevenue.toFixed(2)}`,
       icon: DollarSign,
       color: 'bg-green-500',
     },

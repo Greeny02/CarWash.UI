@@ -250,7 +250,7 @@ export function SaleForm({ onComplete }: SaleFormProps) {
               <div className="flex justify-between items-center">
                 <div>
                   <h4 className="font-medium text-gray-900">{service.name}</h4>
-                  <p className="text-lg font-bold text-blue-600">${service.price.toFixed(2)}</p>
+                  <p className="text-lg font-bold text-blue-600">R{service.price.toFixed(2)}</p>
                 </div>
                 <Plus className="w-6 h-6 text-gray-400" />
               </div>
@@ -269,7 +269,7 @@ export function SaleForm({ onComplete }: SaleFormProps) {
               <div key={service.id} className="flex items-center justify-between bg-white p-3 rounded-lg">
                 <div>
                   <h4 className="font-medium text-gray-900">{service.name}</h4>
-                  <p className="text-sm text-gray-600">${service.price.toFixed(2)} each</p>
+                  <p className="text-sm text-gray-600">R{service.price.toFixed(2)} each</p>
                 </div>
                 
                 <div className="flex items-center space-x-3">
@@ -292,7 +292,7 @@ export function SaleForm({ onComplete }: SaleFormProps) {
                   </div>
                   
                   <span className="font-bold text-gray-900 w-16 text-right">
-                    ${(service.price * service.quantity).toFixed(2)}
+                    R{(service.price * service.quantity).toFixed(2)}
                   </span>
                   
                   <button
@@ -308,7 +308,7 @@ export function SaleForm({ onComplete }: SaleFormProps) {
             
             <div className="border-t pt-3 flex justify-between items-center">
               <span className="text-lg font-semibold text-gray-900">Total:</span>
-              <span className="text-2xl font-bold text-blue-600">${total.toFixed(2)}</span>
+              <span className="text-2xl font-bold text-blue-600">R{total.toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@ export function SaleForm({ onComplete }: SaleFormProps) {
         disabled={selectedServices.length === 0}
         className="w-full bg-green-600 text-white py-4 px-6 rounded-lg font-bold text-xl hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Complete Sale - ${total.toFixed(2)}
+        Complete Sale - R{total.toFixed(2)}
       </button>
     </form>
   );
