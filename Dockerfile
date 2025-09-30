@@ -25,8 +25,8 @@ COPY --from=build /app/dist /usr/share/nginx/html
 # Optional: overwrite default nginx config (needed if using React Router)
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose port 80
-EXPOSE 80
+# Railway will set $PORT, expose it dynamically
+EXPOSE $PORT
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
